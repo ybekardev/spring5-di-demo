@@ -1,0 +1,35 @@
+# this is a comment
+name: yasin
+
+names:
+  -john
+  -joseph
+  -jocelyn
+
+pound_sign: "#"
+
+book:
+    author: John Doe
+    publisher: random house
+
+thruth: yes
+
+another_true: True
+
+more_true: true
+
+false: no # No, false, FALSE
+
+String _val: "This is a string"
+
+colon_string: "my courses: one wo three"
+
+include_new_lines: |
+  fsdfskdfs sdsfdsd sdfsdfsd
+  fsfrwefwe sfsdfsdf sdfsdfsdf
+  sds sd  dddfdf
+
+ignore_new_lines: >
+  rher
+  fsd
+  sd dssdfs sdfsdfs

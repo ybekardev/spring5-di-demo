@@ -5,11 +5,15 @@ import guru.springframework.examplebeans.FakeJmsBroker;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 
 /**
  * Created by jt on 6/7/17.
  */
 @Configuration
+@PropertySources({@PropertySource("classpath:datasource.properties"), @PropertySource("classpath:jms.properties")
+})
 public class PropertyConfig {
 
     @Value("${guru.username}")
@@ -25,7 +29,7 @@ public class PropertyConfig {
     String jmsUsername;
 
     @Value("${guru.jms.password}")
-    String jmsPassoword;
+    String jmsPassword;
 
     @Value("${guru.jms.url}")
     String jmsUrl;
@@ -43,7 +47,7 @@ public class PropertyConfig {
     public FakeJmsBroker fakeJmsBroker(){
         FakeJmsBroker jmsBroker = new FakeJmsBroker();
         jmsBroker.setUsername(jmsUsername);
-        jmsBroker.setPassword(jmsPassoword);
+        jmsBroker.setPassword(jmsPassword);
         jmsBroker.setUrl(jmsUrl);
         return jmsBroker;
     }
