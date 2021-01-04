@@ -3,3 +3,10 @@ guru:
     username: JMS Username
     password: somepass_yml
     url: SomeUrl
+
+---
+spring:
+  progiles: de
+guru:
+  jms:
+    username: JMS *** Username German
